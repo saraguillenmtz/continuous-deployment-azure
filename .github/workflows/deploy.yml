@@ -44,4 +44,4 @@ jobs:
           az containerapp update \
           --name posts-app \
           --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
-          --image ${{ secrets.DOCKERHUB_USERNAME }}/posts:v3
+          --image ${{ secrets.DOCKERHUB_USERNAME }}/posts:v3 //HOLA
