@@ -27,7 +27,7 @@ jobs:
       - name: Login to DockerHub
         run: docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_TOKEN }}" 
       - name: Push image to DockerHub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/posts:v3
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/posts:v2
         
   deploy:
     runs-on: ubuntu-latest
@@ -44,4 +44,4 @@ jobs:
           az containerapp update \
           --name posts-app \
           --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
-          --image ${{ secrets.DOCKERHUB_USERNAME }}/posts:v3 
+          --image ${{ secrets.DOCKERHUB_USERNAME }}/posts:v2
