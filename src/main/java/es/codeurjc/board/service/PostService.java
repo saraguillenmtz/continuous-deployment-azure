@@ -42,7 +42,7 @@ public class PostService {
 	}
 
 	public void deleteById(long id) {
-		this.posts.remove(id); //HOLA
+		this.posts.remove(id); //HOLAA
 	}
 
 }
